@@ -180,21 +180,6 @@ void loop() {
   //line 2:
   digitalWrite(22,LOW);//1
   digitalWrite(23,HIGH); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-  
   delay(500);
 
   var1 = PINC; // get PORTA valued
@@ -206,22 +191,9 @@ void loop() {
   delay(500);
   
   //line 3
-  digitalWrite(22,LOW);//1
   digitalWrite(23,LOW); //2
   digitalWrite(24,HIGH); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
+
   delay(1000);
 
   var1 = PINC; // get PORTA valued
@@ -232,23 +204,9 @@ void loop() {
   delay(500);
  
   //line 4:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
   digitalWrite(24,LOW); //3
-  delay(1000);
   digitalWrite(25,HIGH); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
+
   delay(500);
 
   var1 = PINC; // get PORTA valued
@@ -260,22 +218,9 @@ void loop() {
   delay(500);
   
   //line 5:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
   digitalWrite(25,LOW); //4
   digitalWrite(26,HIGH);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
+  
   
   delay(100);
 
@@ -288,22 +233,8 @@ void loop() {
   delay(500);
   
   //line 6:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
   digitalWrite(26,LOW);//5
   digitalWrite(27,HIGH);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
 
     delay(100);
 
@@ -316,22 +247,10 @@ void loop() {
   delay(500);
   
   //line 7:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
+
   digitalWrite(27,LOW);//6
   digitalWrite(28,HIGH);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
+ 
 
     delay(100);
 
@@ -344,23 +263,8 @@ void loop() {
   delay(500);
   
   //line 8:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
   digitalWrite(28,LOW);//7
   digitalWrite(29,HIGH);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
       delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -373,24 +277,8 @@ void loop() {
   
   
   //line 9:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
   digitalWrite(29,LOW);//8
   digitalWrite(38,HIGH);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
-  
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -402,23 +290,8 @@ void loop() {
   delay(500);
   
   //line 10:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
   digitalWrite(38,LOW);//9
   digitalWrite(39,HIGH);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -430,23 +303,8 @@ void loop() {
   delay(500);
   
   //line 11:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
   digitalWrite(39,LOW);//10
   digitalWrite(40,HIGH);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -458,24 +316,8 @@ void loop() {
   delay(500);
   
   //line 12:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
   digitalWrite(40,LOW);//11
   digitalWrite(41,HIGH);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -487,23 +329,8 @@ void loop() {
   delay(500);
   
   //line 13:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
   digitalWrite(41,LOW);//12
   digitalWrite(42,HIGH);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -515,23 +342,8 @@ void loop() {
   delay(500);
   
   //line 14:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
   digitalWrite(42,LOW);//13
   digitalWrite(43,HIGH);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -543,23 +355,8 @@ void loop() {
   delay(500);
   
   //line 15:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
   digitalWrite(43,LOW);//14
   digitalWrite(45,HIGH);//15
-  digitalWrite(46,LOW);//16
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -571,24 +368,8 @@ void loop() {
   delay(500);
   
   //line 16:
-  digitalWrite(22,LOW);//1
-  digitalWrite(23,LOW); //2
-  digitalWrite(24,LOW); //3
-  digitalWrite(25,LOW); //4
-  digitalWrite(26,LOW);//5
-  digitalWrite(27,LOW);//6
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,LOW);//9
-  digitalWrite(39,LOW);//10
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
   digitalWrite(45,LOW);//15
   digitalWrite(46,HIGH);//16
-
-
   delay(100);
 
   var1 = PINC; // get PORTA valued
