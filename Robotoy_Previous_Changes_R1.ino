@@ -102,10 +102,6 @@ void setup() {
    pinMode(39,OUTPUT);//10
    pinMode(40,OUTPUT);//11
    pinMode(41,OUTPUT);//12
-   pinMode(42,OUTPUT);//13
-   pinMode(43,OUTPUT);//14
-   pinMode(45,OUTPUT);//15
-   pinMode(46,OUTPUT);//16
 
   //motorshield pins:
   pinMode(APolar, OUTPUT);
@@ -160,10 +156,7 @@ void loop() {
   digitalWrite(39,LOW);//10
   digitalWrite(40,LOW);//11
   digitalWrite(41,LOW);//12
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,LOW);//16
+
 
   delay(100);
 
@@ -325,57 +318,11 @@ void loop() {
   Serial.println(var1,BIN);
   delay(500);
   
-  //line 13:
-  digitalWrite(41,LOW);//12
-  digitalWrite(42,HIGH);//13
-  delay(100);
 
-  var1 = PINC; // get PORTA valued
-  main_list[12] = var1; //store in array
-
-  delay(100);
-  Serial.println("Line 13");
-  Serial.println(var1,BIN);
-  delay(500);
   
-  //line 14:
-  digitalWrite(42,LOW);//13
-  digitalWrite(43,HIGH);//14
-  delay(100);
 
-  var1 = PINC; // get PORTA valued
-  main_list[13] = var1; //store in array
-
-  delay(100);
-  Serial.println("Line 14");
-  Serial.println(var1,BIN);
-  delay(500);
   
-  //line 15:
-  digitalWrite(43,LOW);//14
-  digitalWrite(45,HIGH);//15
-  delay(100);
 
-  var1 = PINC; // get PORTA valued
-  main_list[14] = var1; //store in array
-
-  delay(100);
-  Serial.println("Line 15");
-  Serial.println(var1,BIN);
-  delay(500);
-  
-  //line 16:
-  digitalWrite(45,LOW);//15
-  digitalWrite(46,HIGH);//16
-  delay(100);
-
-  var1 = PINC; // get PORTA valued
-  main_list[15] = var1; //store in array
-
-  delay(100);
-  Serial.println("Line 16");
-  Serial.println(var1,BIN);
-  delay(500);
   
   Serial.println("Printing Array:");
   
