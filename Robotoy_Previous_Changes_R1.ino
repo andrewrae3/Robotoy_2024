@@ -27,7 +27,7 @@
 
 //INSTRUCTION BLOCKS RELEVANT VARIALBLES:
 byte var1;
-int main_list[16]; //main instruction list.
+int main_list[12]; //main instruction list.
 int *ptr = main_list; // keeps count on array content.
 std::vector<int>forlist; // for - loop list that will archive contents within the FOR and END block.
 int ArrayLength = 16; //array length block
