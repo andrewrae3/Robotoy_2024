@@ -101,6 +101,8 @@ bool verify = true;
 
 void setup() {
   // put your setup code here, to run once:
+
+  ForLoop();
   
    DDRC = 0; // set PORTC to input
    Serial.begin(9600);
@@ -588,3 +590,121 @@ void enButton(){
             }
         }
       }
+
+int ForLoop() {
+	int mode = all_istr;
+	
+	//simulate for block
+	[[maybe_unused]]int iter_fur1 = 3;
+	[[maybe_unused]]int fur1 = (0x90 + iter_fur1 - 1);
+
+	//simulate for block
+	[[maybe_unused]]int iter_fur2 = 2;
+	[[maybe_unused]]int fur2 = (0x90 + iter_fur2 - 1);
+	
+	vector<int> v = {0x10, 0x40, fur2, 0x20, fur1, 0x40, 0x70, 0x10, 0xA0, 0x30, 0x50, 0xA0};
+	//vector<int> v = {0x9F, 0x9F, 0x9F, 0x9F, 0x9F, 0x9F, 0x9F, 0x00, 0x00, 0xA0, 0xA0, 0xA0, 0xA0, 0xA0, 0xA0, 0xA0};
+	//cout << v.size();
+
+	//vector<int> v = {0x00, 0x10, 0x20, 0x92, 0x40, 0x50, 0x60};
+
+	
+
+	//find last occurence of 'for' in the istr vector 
+	//(guarantees this only runs an amount of times equal to the number of 'for' commands
+	// and eliminates needing to deal with the istr vector being resized)
+	for (int i = v.size() - 1; i >= 0; i--){
+		if (v[i] >> 4 == 0x90 >> 4){
+
+			//grab index of 'for' in the vector and the num of occurences of said 'for' in the last 4 bits of the 'for' istr
+			//cout << i << endl;
+			int iterations = v[i] & 0x0F;
+			
+			//find closest occurence of 'end' after the 'for'
+			for (int j = i; j <= v.size() - 1; j++){
+				if (v[j] == 0xA0){
+					//cout << "size of v: " << v.size() << endl;
+					//cout << "position of 'end': " << j << endl;
+
+					//print
+					/*
+					for (int k = 0; k < v.size(); k++){
+						cout << hex << v[k] << ' ';
+					}
+					cout << endl;
+					*/
+					
+					//replace the found 'for', 'end', and the values in between 
+					//with a repetiton of the values in between specified by iter
+					vector<int>::iterator start = v.begin() + i;
+					vector<int>::iterator end = v.begin() + j;
+					vector<int> v2(start + 1, end);
+
+					v.erase(start); 
+					v.erase(end - 1);
+					
+					for (int k = 0; k < iterations; k++){
+						v.insert(v.begin() + i, v2.begin(), v2.end());
+					}
+					
+					//print
+					for (int k = 0; k < v.size(); k++){
+						cout << hex << v[k] << ' ';
+					}
+					cout << endl;
+					break;
+				}
+
+				// Eliminates extra 'for's
+				if (j == v.size() - 1){
+					cout << "mode: " << mode << endl;
+
+					for (int k = 0; k < v.size(); k++){
+						cout << hex << v[k] << ' ';
+					}
+					cout << endl << i << endl;
+
+					cout << v[i] << endl;
+					v.erase(v.begin() + i);
+					cout << v[i] << endl;
+					
+					switch (mode) {
+						case 0: {break;}
+						case 1: {
+							int istr_temp = v[i];
+							for (int k = 0; k < iterations; k++) {
+								v.insert(v.begin() + i + 1, istr_temp);
+							}
+							break;
+						}
+						case 2: {
+							vector<int>::iterator start = v.begin() + i;
+							vector<int>::iterator end = v.end();
+							vector<int> v2(start, end);
+
+							for (int k = 0; k < iterations; k++){
+								v.insert(v.begin() + i, v2.begin(), v2.end());
+							}
+							break;
+						}
+						default: {
+							;;
+						}	
+					}
+					break;
+					for (int k = 0; k < v.size(); k++){
+						cout << hex << v[k] << ' ';
+					}
+					cout << endl;
+					break;
+				}	
+				// More options are to only repeat the istr after the 'for' or all istr up until the end of the list
+			}
+		}
+	}
+	//print
+	for (int k = 0; k < v.size(); k++){
+		cout << hex << v[k] << ' ';
+	}
+	cout << endl;
+}
