@@ -1,6 +1,24 @@
 #include <StandardCplusplus.h>
 #include <vector>
 #include <Servo.h>
+#include <iostream>
+#include <string>
+
+
+// ** For Loop Instructions ** //
+//0x00 = break
+//0x10 = fwd
+//0x20 = turn L
+//0x30 = turn R
+
+//0x90 = for
+//0xA0 = end
+
+
+[[maybe_unused]] const int del_istr = 0;
+[[maybe_unused]] const int next_istr = 1;
+[[maybe_unused]] const int all_istr = 2;
+
 /*
  * TECHNICAL DIRECTORS:
  * PAOLO STEGAGNO
