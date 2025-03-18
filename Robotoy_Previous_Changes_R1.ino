@@ -249,8 +249,8 @@ void loop() {
   delay(500);
   
   //line 8:
-  digitalWrite(28,LOW);//7
-  digitalWrite(29,HIGH);//8
+  digitalWrite(30,LOW);//7
+  digitalWrite(32,HIGH);//8
       delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -263,8 +263,8 @@ void loop() {
   
   
   //line 9:
-  digitalWrite(29,LOW);//8
-  digitalWrite(38,HIGH);//9
+  digitalWrite(32,LOW);//8
+  digitalWrite(41,HIGH);//9
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -276,7 +276,7 @@ void loop() {
   delay(500);
   
   //line 10:
-  digitalWrite(38,LOW);//9
+  digitalWrite(41,LOW);//9
   digitalWrite(39,HIGH);//10
   delay(100);
 
@@ -290,7 +290,7 @@ void loop() {
   
   //line 11:
   digitalWrite(39,LOW);//10
-  digitalWrite(40,HIGH);//11
+  digitalWrite(37,HIGH);//11
   delay(100);
 
   var1 = PINC; // get PORTA valued
@@ -302,8 +302,8 @@ void loop() {
   delay(500);
   
   //line 12:
-  digitalWrite(40,LOW);//11
-  digitalWrite(41,HIGH);//12
+  digitalWrite(37,LOW);//11
+  digitalWrite(35,HIGH);//12
   delay(100);
 
   var1 = PINC; // get PORTA valued
