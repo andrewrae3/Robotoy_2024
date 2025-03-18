@@ -157,11 +157,6 @@ ForLoop();
 void loop() {
   // put your main code here, to run repeatedly:
 
-start_time = millis();
-time_istr = immediate;
-if (millis() - start_time > immediate * 1000){
-	case = brake;
-}
 
   
  
@@ -218,7 +213,8 @@ void Command(){
     case 0://Brake
       digitalWrite(Brake_A,HIGH);
       digitalWrite(Brake_B,HIGH);
-      delay(500);
+      opCode = time_check;
+      delay(10);
       break;
       
     case 1://Forward
@@ -226,8 +222,9 @@ void Command(){
       digitalWrite(Brake_B,LOW);
       digitalWrite(BPolar,HIGH);
       digitalWrite(APolar,LOW);
-      delay(immediate*1000);
-      break;e
+	opCode = time_check;
+      delay(10);
+      break;
       
     case 2://Backward
       digitalWrite(Brake_A,LOW);
