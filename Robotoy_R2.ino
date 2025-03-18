@@ -19,6 +19,9 @@
 [[maybe_unused]] const int next_istr = 1;
 [[maybe_unused]] const int all_istr = 2;
 
+const int time_check = 0x30;
+const int start = 0x31;
+
 using namespace std;
 
 /*
@@ -102,7 +105,7 @@ bool verify = true;
 void setup() {
   // put your setup code here, to run once:
 
-  ForLoop();
+  
   
    Serial.begin(9600);
    
@@ -145,17 +148,20 @@ void setup() {
 
   //buzzer enabled:
   pinMode(buzzerPin,OUTPUT);
-
-  //robotic arm pins:
-  myservo.attach(50);
-  myservo2.attach(51);
-  myservo3.attach(49);
+	
+// reading array rows
+	
+ForLoop();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-
+start_time = millis();
+time_istr = immediate;
+if (millis() - start_time > immediate * 1000){
+	case = brake;
+}
 
   
  
@@ -196,6 +202,19 @@ void loop() {
 
 void Command(){
   switch(opCode){
+	  
+  	case start:
+	  opCode = istrlist[idx] >> 4;
+	  immediate = istrlist[idx] % 16;
+	  start_time = millis();
+	  break;
+	  
+	  case time_check;
+	  if(millis() - start_time > immediate *1000){
+		  idx++;
+		  opCode = start;
+	  }
+	  
     case 0://Brake
       digitalWrite(Brake_A,HIGH);
       digitalWrite(Brake_B,HIGH);
@@ -208,7 +227,7 @@ void Command(){
       digitalWrite(BPolar,HIGH);
       digitalWrite(APolar,LOW);
       delay(immediate*1000);
-      break;
+      break;e
       
     case 2://Backward
       digitalWrite(Brake_A,LOW);
