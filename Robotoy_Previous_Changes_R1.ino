@@ -86,22 +86,18 @@ void setup() {
    Serial.begin(9600);
    
   //Button Array Pins:
-   pinMode(22,OUTPUT);//1
-   pinMode(23,OUTPUT);//2
-   pinMode(24,OUTPUT);//3
-   pinMode(25,OUTPUT); //4
-   pinMode(26,OUTPUT);//5
-   pinMode(27,OUTPUT);//6
-   pinMode(28,OUTPUT);//7
-   pinMode(29,OUTPUT);//8
-   
-   //30 - 37: 7 bit PORTC
-   //44 belongs to arm
-   
-   pinMode(38,OUTPUT);//9
+   pinMode(34,OUTPUT);//1
+   pinMode(36,OUTPUT);//2
+   pinMode(38,OUTPUT);//3
+   pinMode(40,OUTPUT); //4
+   pinMode(33,OUTPUT);//5
+   pinMode(31,OUTPUT);//6
+   pinMode(30,OUTPUT);//7
+   pinMode(32,OUTPUT);//8   
+   pinMode(41,OUTPUT);//9
    pinMode(39,OUTPUT);//10
-   pinMode(40,OUTPUT);//11
-   pinMode(41,OUTPUT);//12
+   pinMode(37,OUTPUT);//11
+   pinMode(35,OUTPUT);//12
 
   //motorshield pins:
   pinMode(APolar, OUTPUT);
