@@ -19,6 +19,8 @@
 [[maybe_unused]] const int next_istr = 1;
 [[maybe_unused]] const int all_istr = 2;
 
+using namespace std;
+
 /*
  * TECHNICAL DIRECTORS:
  * PAOLO STEGAGNO
@@ -47,7 +49,7 @@
 byte var1;
 int main_list[12]; //main instruction list.
 int *ptr = main_list; // keeps count on array content.
-std::vector<int>forlist; // for - loop list that will archive contents within the FOR and END block.
+vector<int>forlist; // for - loop list that will archive contents within the FOR and END block.
 int ArrayLength = 16; //array length block
 int i;
 int forNum;
