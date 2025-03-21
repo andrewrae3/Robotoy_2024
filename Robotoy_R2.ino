@@ -253,7 +253,7 @@ void Command(){
       delay(10);
       break;
       
-   // not sure what case numbers rest should be
+   // not sure what case numbers should be
       
     case 8: //Ultrasonic Sensor
       SensorStop();
