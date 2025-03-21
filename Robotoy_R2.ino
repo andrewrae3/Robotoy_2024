@@ -40,7 +40,7 @@ using namespace std;
  * RIGHT = 04
  * FOR = 05
  * END = 06
- * ROBOTIC ARM = 07 
+ * ROBOTIC ARM = 07
  * ULTRASONIC SENSOR = 08 
  * BUZZER = 09
  * SENSOR & ARM = 10 
@@ -76,9 +76,12 @@ int B_PWM = 11;
 
 
 //ULTRASONIC PINS:
-int echo = 6;
-int trig = 2;
-int vcc = 7;
+
+//updated March 21 2025
+// 
+int echo = 19;
+int trig = 18;
+
 //Sensor variables:
 const unsigned int MAX_DIST = 23200;
 unsigned long t1;
@@ -144,7 +147,6 @@ void setup() {
   //sensor pins setup:
   pinMode(trig,OUTPUT);
   pinMode(echo,INPUT);
-  pinMode(vcc,OUTPUT);
 
   //buzzer enabled:
   pinMode(buzzerPin,OUTPUT);
