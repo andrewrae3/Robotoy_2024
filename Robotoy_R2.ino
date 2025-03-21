@@ -34,16 +34,17 @@ using namespace std;
 */
 
 /* INSTRUCTION SET:
+ * BRAKE = 00
  * UP = 01
  * DOWN = 02
  * LEFT = 03
  * RIGHT = 04
  * FOR = 05
  * END = 06
- * ROBOTIC ARM = 07
+ 
  * ULTRASONIC SENSOR = 08 
  * BUZZER = 09
- * SENSOR & ARM = 10 
+ 
  * SENSOR & BEEP = 11
  * WIGGLE = 12
 */
