@@ -222,7 +222,7 @@ void Command(){
       digitalWrite(Brake_B,LOW);
       digitalWrite(BPolar,HIGH);
       digitalWrite(APolar,LOW);
-	opCode = time_check;
+      opCode = time_check;
       delay(10);
       break;
       
@@ -231,7 +231,8 @@ void Command(){
       digitalWrite(Brake_B,LOW);
       digitalWrite(BPolar,LOW);
       digitalWrite(APolar,HIGH);
-      delay(immediate*1000);
+      opCode = time_check;
+      delay(10);
       break;
 
     case 3://TurnLeft
@@ -239,7 +240,8 @@ void Command(){
       digitalWrite(Brake_B,LOW);
       digitalWrite(APolar,LOW);
       digitalWrite(BPolar,LOW);
-      delay(immediate*1000);
+      opCode = time_check;
+      delay(10);
       break;
       
     case 4://TurnRight
@@ -247,31 +249,11 @@ void Command(){
       digitalWrite(Brake_B,LOW);
       digitalWrite(APolar,HIGH);
       digitalWrite(BPolar,HIGH);
-      delay(immediate*1000);
+      opCode = time_check;
+      delay(10);
       break;
       
-    case 5://For Loop
-      i++;
-      while(ptr[i]>>4 != 6){
-        forlist.push_back(ptr[i]);
-        i++;
-        }
-        if(ptr[i]>>4 == 6){
-          i++;
-          for(int j = 0; j < forNum; j++){
-            for(unsigned int b = 0; b != forlist.size(); ++b){
-              opCode = forlist[b] >> 4;
-              immediate = forlist[b] % 16;
-              Command();
-              delay(50);
-              } 
-            }
-          }
-      break;
-
-    case 7:// Robotic Arm
-      RoboticArm();
-      break;
+   // not sure what case numbers rest should be
       
     case 8: //Ultrasonic Sensor
       SensorStop();
@@ -280,17 +262,14 @@ void Command(){
       
     case 9: //Buzzer
       digitalWrite(buzzerPin, HIGH);
-      delay(immediate*1000);
+      opCode = time_check;
+      delay(10);
       digitalWrite(buzzerPin, LOW);
       delay(50);
       
       break;
       
-    case 10: //Sensor and Arm
-      SensorArm();
-      verify = true;
-      break;
-      
+ 
     case 11: //Sensor and Buzzer
       SensorBuzz();
       verify = true;
